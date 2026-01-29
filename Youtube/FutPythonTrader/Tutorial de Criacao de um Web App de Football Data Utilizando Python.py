@@ -26,4 +26,4 @@ df = load_data(selected_league, selectd_season)
 ## 1. Salvar o nosso dashboard -> "Commit changeg"
 ## 2. Para testar precisamos de criar um novo arquivo dentro desta pasta, com o nome requeriments.txt
 ## 3. Dentro do arquivo temos de colocar as bibliotecas que necessitamos que sejam instaladas
-
+## 4. Ir para o site do streamlit -> "streamlit.io"
