@@ -52,6 +52,7 @@ df = load_data(selected_league, selected_season)
 ## 6. Crate app
 ## 7. Deploy a public app from Github
 ## 8. Past Github URL - basta abrir o código no Github e copiar o link que está na barra de address "https://github.com/MeSe7e/Estudos/blob/main/Youtube/FutPythonTrader/webappfootballdatanopython.py"
+## 9. Se ao fazer commit aqui, ele não atualizar automaticamente no streamlit, no streamlit selecionar "manage app" e fazer reboot app
 
 st.subheader('Dataframe: '+selected_league)
 st.dataframe(df)
