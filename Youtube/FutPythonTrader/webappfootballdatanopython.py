@@ -1,3 +1,5 @@
+# Baseado no vídeo do youtube de FutPythonTrader "tutorial de criacao de um web app de football data utilizando python"
+
 # Import das Bibliotecas
 import streamlit as st
 import pandas as pd
