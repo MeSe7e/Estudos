@@ -41,7 +41,7 @@ def load_data(league, season):
   data = pd.read_csv(url)
   return data
 
-df = load_data(selected_league, selectd_season) 
+df = load_data(selected_league, selected_season) 
 
 # Para ver como está o nosso dashboard
 ## 1. Salvar o nosso dashboard -> "Commit changeg"
