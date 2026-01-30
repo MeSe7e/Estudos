@@ -19,6 +19,6 @@ def load_data_jogos():
     data_jogos = pd.read_csv("https://github.com/futpythontrader/YouTube/blob/main/Jogos_do_Dia_FlashScore/"+str(dia)+"_Jogos_do_Dia_FlashScore.csv?raw=true") # ?raw=true, porque é um arquivo que está no github
     return data_jogos
 
-df_jogos = load_data_jogos
+df_jogos = load_data_jogos()
 
 st.dataframe(df_jogos)
