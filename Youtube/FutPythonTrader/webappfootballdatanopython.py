@@ -67,3 +67,21 @@ def filedownload(df):
 
 # Criar o markdown
 st.markdown(filedownload(df), unsafe_allow_html=True)
+
+###################################################################################################################
+# Daqui para baixo sou eu a tentar perceber como se faz para ter um sítio para escolher os campos que eu quero ver
+###################################################################################################################
+st.title("Seleção de Colunas do DataFrame")
+
+# 2. Criar o campo multiselect para escolher as colunas
+colunas = st.multiselect(
+    "Selecione as colunas para exibir:",
+    options=list(df.columns),
+    default=['Home', 'Away'] # Colunas exibidas por padrão
+)
+
+# 3. Filtrar e exibir o dataframe com base na seleção
+if colunas:
+    st.write(df[colunas])
+else:
+    st.write("Por favor, selecione pelo menos uma coluna.")
