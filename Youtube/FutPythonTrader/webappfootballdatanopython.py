@@ -73,14 +73,29 @@ st.markdown(filedownload(df), unsafe_allow_html=True)
 ###################################################################################################################
 st.title("Seleção de Colunas do DataFrame")
 
-# 2. Criar o campo multiselect para escolher as colunas
+# 1. Criar o campo multiselect para escolher as colunas
 colunas = st.multiselect(
     "Selecione as colunas para exibir:",
     options=list(df.columns),
     default=['HomeTeam', 'AwayTeam'] # Colunas exibidas por padrão
 )
 
-# 3. Filtrar e exibir o dataframe com base na seleção
+# 2. Filtrar e exibir o dataframe com base na seleção
+if colunas:
+    st.write(df[colunas])
+else:
+    st.write("Por favor, selecione pelo menos uma coluna.")
+
+st. sidebar.header("Colunas")
+
+#selected_season = st.sidebar.selectbox('Season', ['2021/2022', '2020/2021', '2019/2020'])
+
+colunas = st.sidebar.multiselect("Selecione as colunas para exibir:",
+    options=list(df.columns),
+    default=['HomeTeam', 'AwayTeam'] # Colunas exibidas por padrão
+)
+  
+# 2. Filtrar e exibir o dataframe com base na seleção
 if colunas:
     st.write(df[colunas])
 else:
