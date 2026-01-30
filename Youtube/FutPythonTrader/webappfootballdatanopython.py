@@ -4,6 +4,7 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
+import base64
 
 # Criar título para a nossa App
 st.title("Web App Football Data")
@@ -56,3 +57,13 @@ df = load_data(selected_league, selected_season)
 
 st.subheader('Dataframe: '+selected_league)
 st.dataframe(df)
+
+# Criar botão para fazer download do dataframe
+def filedownload(df):
+  csv = df.to_csv(index=False) # index = False para não fazer o download do índice
+  b64 = base64.b64encode(csv.encode()).decode()
+  href = f'<a href="data:file/csv;base64,{b64}" download="Base_de_Dados.csv">Download CSV File</a>'
+  return href
+
+# Criar o markdown
+st.markdown(filedownload(df), unsafe_allow_html=True)
