@@ -77,7 +77,7 @@ st.title("Seleção de Colunas do DataFrame")
 colunas = st.multiselect(
     "Selecione as colunas para exibir:",
     options=list(df.columns),
-    default=['Home', 'Away'] # Colunas exibidas por padrão
+    default=['HomeTeam', 'AwayTeam'] # Colunas exibidas por padrão
 )
 
 # 3. Filtrar e exibir o dataframe com base na seleção
