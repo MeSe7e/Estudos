@@ -10,5 +10,5 @@ st.title("Jogos do Dia")
 
 # Para escolher o dia que queremos ver dos jogos do dia
 dia = st.date_input(
-    "Data de Análise,
-    date.today())"
+    "Data de Análise, "
+    date.today())
